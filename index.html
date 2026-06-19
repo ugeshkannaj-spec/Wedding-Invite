@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Wedding Invitation</title>
+    
+    <!-- Elegant Royal Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --royal-maroon: #721c24; /* Deep, rich South Indian traditional maroon */
+            --gold-accent: #D4AF37;  /* Brilliant gold leaf color */
+            --gold-light: #f9f5eb;   /* Soft cream with a hint of gold warmth */
+            --text-dark: #3a322f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--gold-light);
+            color: var(--text-dark);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Traditional Border Framing */
+        .page-frame {
+            border: 15px solid var(--royal-maroon);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Hero / Welcome Section */
+        .hero {
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(114, 28, 36, 0.45), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+        }
+
+        .traditional-hook {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.2rem;
+            color: var(--gold-accent);
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+        }
+
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            margin: 15px 0;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .invitation-line {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            max-width: 600px;
+            margin: 15px auto;
+        }
+
+        /* Main Invitation Box */
+        .content-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .traditional-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.6rem;
+            color: var(--royal-maroon);
+            margin-bottom: 25px;
+        }
+
+        .gold-divider {
+            color: var(--gold-accent);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Countdown Clock Styles */
+        .countdown-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .time-card {
+            background: white;
+            border: 2px solid var(--gold-accent);
+            padding: 15px;
+            min-width: 90px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(114, 28, 36, 0.08);
+        }
+
+        .time-card span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: var(--royal-maroon);
+        }
+
+        /* Grand Card Layout for Events */
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .grand-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .grand-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-banner {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner-reception {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=600');
+        }
+
+        .banner-muhurtham {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?q=80&w=600');
+        }
+
+        .card-body {
+            padding: 30px 20px;
+        }
+
+        .event-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--royal-maroon);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .event-details {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .event-details strong {
+            color: var(--text-dark);
+        }
+
+        .btn-location {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: var(--royal-maroon);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(114, 28, 36, 0.3);
+        }
+
+        .btn-location:hover {
+            background-color: transparent;
+            color: var(--royal-maroon);
+            border-color: var(--royal-maroon);
+            box-shadow: none;
+        }
+
+        /* Traditional Footer */
+        .grand-footer {
+            background-color: var(--royal-maroon);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--gold-accent);
+        }
+
+        .footer-blessing {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--gold-accent);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-frame">
+        
+        <!-- Royal Header Image/Text Wrap -->
+        <div class="hero">
+            <div class="traditional-hook">S H R E E  G A N E S H A Y A  N A M A H</div>
+            <div class="invitation-line" style="font-size: 1.1rem; color: var(--gold-accent);">Together with their families</div>
+            <div class="couple-names">Bride & Groom</div>
+            <div class="invitation-line">Request the honor of your presence to grace the auspicious occasion of their wedding ceremony.</div>
+        </div>
+
+        <!-- Details & Countdown -->
+        <section class="content-section">
+            <h2 class="traditional-heading">The Celebration Begins In</h2>
+            <div class="gold-divider">🔱 ——— ⚜ ——— 🔱</div>
+            
+            <div class="countdown-row">
+                <div class="time-card"><span id="days">00</span>Days</div>
+                <div class="time-card"><span id="hours">00</span>Hours</div>
+                <div class="time-card"><span id="minutes">00</span>Mins</div>
+                <div class="time-card"><span id="seconds">00</span>Secs</div>
+            </div>
+        </section>
+
+        <!-- Wedding Itinerary Sections -->
+        <section class="content-section" style="padding-top: 0;">
+            <h2 class="traditional-heading">Wedding Program</h2>
+            
+            <div class="events-grid">
+                <!-- Event 1: Reception -->
+                <div class="grand-card">
+                    <div class="card-banner banner-reception"></div>
+                    <div class="card-body">
+                        <div class="event-name">The Reception</div>
+                        <p class="event-details"><strong>Date:</strong> Saturday, November 14, 2026</p>
+                        <p class="event-details"><strong>Time:</strong> From 6:30 PM onwards</p>
+                        <p class="event-details"><strong>Venue:</strong> Royal Palace Mandapam, Chennai</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn-location">📍 Locate Venue</a>
+                    </div>
+                </div>
+
+                <!-- Event 2: Muhurtham -->
+                <div class="grand-card">
+                    <div class="card-banner banner-muhurtham"></div>
+                    <div class="card-body">
+                        <div class="event-name">The Muhurtham</div>
+                        <p class="event-details"><strong>Date:</strong> Sunday, November 15, 2026</p>
+                        <p class="event-details"><strong>Time:</strong> 9:00 AM - 10:30 AM</p>
+                        <p class="event-details"><strong>Venue:</strong> Royal Palace Mandapam, Chennai</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn-location">📍 Locate Venue</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional Blessing Footer -->
+        <footer class="grand-footer">
+            <p class="footer-blessing">"Blessings are the most beautiful gifts we can receive."</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">Seek your presence and prayers • The Family</p>
+        </footer>
+
+    </div>
+
+    <!-- Live Dynamic Countdown Logic -->
+    <script>
+        // Set the exact time for the Muhurtham or wedding ceremony start
+        const weddingTimestamp = new Date("Nov 15, 2026 09:00:00").getTime();
+
+        const countdownProcessor = setInterval(function() {
+            const rightNow = new Date().getTime();
+            const timeDifference = weddingTimestamp - rightNow;
+
+            const d = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const h = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+
+            if (timeDifference < 0) {
+                clearInterval(countdownProcessor);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
